@@ -1,0 +1,2 @@
+# SXTableViewManager
+分离出datasource和delegate和其他操作，更加方便的管理tableVIew
