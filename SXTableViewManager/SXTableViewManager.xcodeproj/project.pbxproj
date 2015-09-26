@@ -21,6 +21,7 @@
 		1DD13D2F1BB3D571009EB9CD /* SXCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D2E1BB3D571009EB9CD /* SXCellModel.m */; settings = {ASSET_TAGS = (); }; };
 		1DD13D321BB3E55B009EB9CD /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D311BB3E55B009EB9CD /* UIViewAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		1DD13D361BB68422009EB9CD /* SXTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D351BB68422009EB9CD /* SXTableViewManager.m */; settings = {ASSET_TAGS = (); }; };
+		1DD13D391BB6920A009EB9CD /* SXCellInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D381BB6920A009EB9CD /* SXCellInteraction.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		1DD13D311BB3E55B009EB9CD /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DD13D341BB68422009EB9CD /* SXTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTableViewManager.h; sourceTree = "<group>"; };
 		1DD13D351BB68422009EB9CD /* SXTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTableViewManager.m; sourceTree = "<group>"; };
+		1DD13D371BB6920A009EB9CD /* SXCellInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCellInteraction.h; sourceTree = "<group>"; };
+		1DD13D381BB6920A009EB9CD /* SXCellInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCellInteraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 			children = (
 				1DD13D341BB68422009EB9CD /* SXTableViewManager.h */,
 				1DD13D351BB68422009EB9CD /* SXTableViewManager.m */,
+				1DD13D371BB6920A009EB9CD /* SXCellInteraction.h */,
+				1DD13D381BB6920A009EB9CD /* SXCellInteraction.m */,
 			);
 			name = sourcefile;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD13D361BB68422009EB9CD /* SXTableViewManager.m in Sources */,
+				1DD13D391BB6920A009EB9CD /* SXCellInteraction.m in Sources */,
 				1DD13D2F1BB3D571009EB9CD /* SXCellModel.m in Sources */,
 				1DD13D281BB3D2C9009EB9CD /* SXXibCell.m in Sources */,
 				1DD13D321BB3E55B009EB9CD /* UIViewAdditions.m in Sources */,
