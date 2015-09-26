@@ -9,6 +9,7 @@
 #import "SXTableViewManager.h"
 #import "SXCellModel.h"
 #import "SXXibCell.h"
+#import "UITableViewCell+Interaction.h"
 
 
 @interface SXTableViewManager ()<UITableViewDataSource,UITableViewDelegate>
@@ -29,6 +30,14 @@
     return _itemArray;
 }
 
+- (UITableView *)tableView
+{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+    }
+    return _tableView;
+}
+
 + (instancetype)manager
 {
     return [[self alloc]init];
@@ -38,9 +47,9 @@
 {
     self.itemArray = array;
     self.cellName = cellName;
-    Class cellClass = nil;
-    cellClass = NSClassFromString(cellName);
-    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor yellowColor];
     
     return _tableView;
 }
@@ -52,17 +61,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"%ld",self.itemArray.count);
     return self.itemArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    SXXibCell *cell = [SXXibCell cellWithTableView:tableView];
-    
     SXCellModel *model = self.itemArray[indexPath.row];
     
-    cell.model = model;
+    Class cellClass = nil;
+    cellClass = NSClassFromString(self.cellName);
+    UITableViewCell *cell = [[cellClass alloc]init];
+    cell.backgroundColor = [UIColor redColor];
+    [cell setModel:model];
+    
+//    SXXibCell *cell = [SXXibCell cellWithTableView:tableView];
+//    
+//    SXCellModel *model = self.itemArray[indexPath.row];
+//    
+//    cell.model = model;
     
     return cell;
 }

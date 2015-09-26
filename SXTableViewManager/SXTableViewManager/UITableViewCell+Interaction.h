@@ -13,6 +13,7 @@
 @interface UITableViewCell (Interaction)
 
 @property (nonatomic, strong) SXCellInteraction *interaction;
+@property (nonatomic, strong) id model;
 
 - (void)addCellInteraction:(NSDictionary *)parameter;
 

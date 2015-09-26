@@ -30,9 +30,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.tableView];
+
 //    self.tbvManager = [SXTableViewManager manager];
-    _tableView = [[SXTableViewManager manager] tableViewWithItemArray:self.modelArray cellName:@"SXXibCell"];
 
 //    [self.tableView registerClass:[SXXibCell class] forCellReuseIdentifier:@"ID"];
 //    [_tableView registerNib:[UINib nibWithNibName:@"SXXibCell" bundle:nil] forCellReuseIdentifier:@"ID"];
@@ -68,6 +67,9 @@
     m0.btnName = @"回复";
     
     self.modelArray = @[m0,m1,m2,m3,m4,m1,m2,m3,m4,m1,m2,m3,m4,m0,m1,m2,m3,m4,m1,m2,m3,m4,m1,m2,m3,m4];
+    
+    self.tableView = [[SXTableViewManager manager] tableViewWithItemArray:self.modelArray cellName:@"SXXibCell"];
+    [self.view addSubview:self.tableView];
     
 }
 
