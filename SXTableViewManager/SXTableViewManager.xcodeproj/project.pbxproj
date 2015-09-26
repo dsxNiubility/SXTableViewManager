@@ -20,6 +20,7 @@
 		1DD13D2C1BB3D2E4009EB9CD /* SXCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D2B1BB3D2E4009EB9CD /* SXCodeCell.m */; settings = {ASSET_TAGS = (); }; };
 		1DD13D2F1BB3D571009EB9CD /* SXCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D2E1BB3D571009EB9CD /* SXCellModel.m */; settings = {ASSET_TAGS = (); }; };
 		1DD13D321BB3E55B009EB9CD /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D311BB3E55B009EB9CD /* UIViewAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		1DD13D361BB68422009EB9CD /* SXTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD13D351BB68422009EB9CD /* SXTableViewManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		1DD13D2E1BB3D571009EB9CD /* SXCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCellModel.m; sourceTree = "<group>"; };
 		1DD13D301BB3E55B009EB9CD /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		1DD13D311BB3E55B009EB9CD /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		1DD13D341BB68422009EB9CD /* SXTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTableViewManager.h; sourceTree = "<group>"; };
+		1DD13D351BB68422009EB9CD /* SXTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTableViewManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		1DD13CF11BB3CF73009EB9CD /* SXTableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				1DD13D331BB683FB009EB9CD /* sourcefile */,
 				1DD13D301BB3E55B009EB9CD /* UIViewAdditions.h */,
 				1DD13D311BB3E55B009EB9CD /* UIViewAdditions.m */,
 				1DD13CF51BB3CF73009EB9CD /* AppDelegate.h */,
@@ -161,6 +165,15 @@
 				1DD13D191BB3CF74009EB9CD /* Info.plist */,
 			);
 			path = SXTableViewManagerUITests;
+			sourceTree = "<group>";
+		};
+		1DD13D331BB683FB009EB9CD /* sourcefile */ = {
+			isa = PBXGroup;
+			children = (
+				1DD13D341BB68422009EB9CD /* SXTableViewManager.h */,
+				1DD13D351BB68422009EB9CD /* SXTableViewManager.m */,
+			);
+			name = sourcefile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD13D361BB68422009EB9CD /* SXTableViewManager.m in Sources */,
 				1DD13D2F1BB3D571009EB9CD /* SXCellModel.m in Sources */,
 				1DD13D281BB3D2C9009EB9CD /* SXXibCell.m in Sources */,
 				1DD13D321BB3E55B009EB9CD /* UIViewAdditions.m in Sources */,

@@ -9,11 +9,13 @@
 #import "SXViewController.h"
 #import "SXCellModel.h"
 #import "SXXibCell.h"
+#import "SXTableViewManager.h"
 
-@interface SXViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface SXViewController ()
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *modelArray;
+@property(nonatomic,strong)SXTableViewManager *tbvManager;
 
 @end
 
@@ -29,8 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+//    self.tbvManager = [SXTableViewManager manager];
+    _tableView = [[SXTableViewManager manager] tableViewWithItemArray:self.modelArray cellName:@"SXXibCell"];
+
 //    [self.tableView registerClass:[SXXibCell class] forCellReuseIdentifier:@"ID"];
 //    [_tableView registerNib:[UINib nibWithNibName:@"SXXibCell" bundle:nil] forCellReuseIdentifier:@"ID"];
     
@@ -68,33 +71,33 @@
     
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.modelArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    SXXibCell *cell = [SXXibCell cellWithTableView:tableView];
-    
-    SXCellModel *model = self.modelArray[indexPath.row];
-    
-    cell.model = model;
-    
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    NSLog(@"行高");
-    SXCellModel *model = self.modelArray[indexPath.row];
-    return [SXXibCell cellHeightWithModel:model];
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return self.modelArray.count;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    SXXibCell *cell = [SXXibCell cellWithTableView:tableView];
+//    
+//    SXCellModel *model = self.modelArray[indexPath.row];
+//    
+//    cell.model = model;
+//    
+//    return cell;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+////    NSLog(@"行高");
+//    SXCellModel *model = self.modelArray[indexPath.row];
+//    return [SXXibCell cellHeightWithModel:model];
+//}
 
 
 @end
