@@ -13,7 +13,7 @@
 static const void *interaction = &interaction;
 
 @implementation UITableViewCell (Interaction)
-
+@dynamic model;
 #pragma mark - Public method
 
 - (void)addCellInteraction:(NSDictionary *)parameter

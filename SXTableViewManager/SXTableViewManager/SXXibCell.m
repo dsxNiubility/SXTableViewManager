@@ -24,6 +24,15 @@
     // Initialization code
 }
 
+- (instancetype)init
+{
+//    self = [super init];
+//    if (self) {
+//        
+//    }
+    return [SXXibCell cell];
+}
+
 + (instancetype)cell{
    return [[NSBundle mainBundle]loadNibNamed:@"SXXibCell" owner:nil options:nil][0];
 }

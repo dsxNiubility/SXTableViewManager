@@ -72,7 +72,7 @@
     Class cellClass = nil;
     cellClass = NSClassFromString(self.cellName);
     UITableViewCell *cell = [[cellClass alloc]init];
-    cell.backgroundColor = [UIColor redColor];
+//    cell.backgroundColor = [UIColor redColor];
     [cell setModel:model];
     
 //    SXXibCell *cell = [SXXibCell cellWithTableView:tableView];
@@ -88,7 +88,12 @@
 {
     //    NSLog(@"行高");
     SXCellModel *model = self.itemArray[indexPath.row];
-    return [SXXibCell cellHeightWithModel:model];
+    Class cellClass = nil;
+    cellClass = NSClassFromString(self.cellName);
+//    UITableViewCell *cell = [[cellClass alloc]init];
+    return [cellClass cellHeightWithModel:model];
+    
+//    return 30;
 }
 
 @end

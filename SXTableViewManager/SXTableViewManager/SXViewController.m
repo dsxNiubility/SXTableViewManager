@@ -21,13 +21,13 @@
 
 @implementation SXViewController
 
-- (UITableView *)tableView
-{
-    if (_tableView == nil) {
-        _tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-    }
-    return _tableView;
-}
+//- (UITableView *)tableView
+//{
+//    if (_tableView == nil) {
+//        _tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+//    }
+//    return _tableView;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -68,7 +68,9 @@
     
     self.modelArray = @[m0,m1,m2,m3,m4,m1,m2,m3,m4,m1,m2,m3,m4,m0,m1,m2,m3,m4,m1,m2,m3,m4,m1,m2,m3,m4];
     
-    self.tableView = [[SXTableViewManager manager] tableViewWithItemArray:self.modelArray cellName:@"SXXibCell"];
+    _tbvManager = [SXTableViewManager manager];
+    
+    self.tableView = [_tbvManager tableViewWithItemArray:self.modelArray cellName:@"SXXibCell"];
     [self.view addSubview:self.tableView];
     
 }

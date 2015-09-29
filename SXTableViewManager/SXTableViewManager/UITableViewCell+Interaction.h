@@ -17,4 +17,6 @@
 
 - (void)addCellInteraction:(NSDictionary *)parameter;
 
++ (CGFloat)cellHeightWithModel:(id)model;
+
 @end
